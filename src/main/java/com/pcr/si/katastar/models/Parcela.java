@@ -125,6 +125,7 @@ public class Parcela {
     }
 
     public void dodajNepokretnost(Nepokretnost nepokretnost) {
+        nepokretnost.setParcela(this);
         this.nepokrenosti.add(nepokretnost);
     }
 

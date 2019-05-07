@@ -41,8 +41,8 @@ public class KatastarServiceImpl implements KatastarService {
     }
 
     @Override
-    public void obrisiHipoteku(Hipoteka hipoteka) {
-        hipotekaRepository.delete(hipoteka);
+    public void obrisiHipoteku(String hipotekaId) {
+        hipotekaRepository.deleteById(hipotekaId);
     }
 
     @Override
@@ -90,5 +90,17 @@ public class KatastarServiceImpl implements KatastarService {
     @Override
     public List<Parcela> pretragaParcelaPoPostanskomKodu(int postanskiKod) {
         return parcelaRepository.findAllByPostanskiKod(postanskiKod);
+    }
+
+    @Override
+    public List<Parcela> pretraziParcelePoBrojuParcele(String brojParcele) throws EntityNotFoundException {
+        return Collections.singletonList(parcelaRepository.findById(brojParcele).orElseThrow(EntityNotFoundException::new));
+    }
+
+    @Override
+    public void upisiNepokrenostNaParcelu(Nepokretnost nepokretnost, String parcelaId) {
+        Parcela parcela = parcelaRepository.findById(parcelaId).orElseThrow(EntityNotFoundException::new);
+        parcela.dodajNepokretnost(nepokretnost);
+        parcelaRepository.save(parcela);
     }
 }

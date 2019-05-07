@@ -9,11 +9,13 @@ import java.util.List;
 public interface KatastarService {
     void upisiHipotekuNaParcelu(Hipoteka hipoteka, String parcelaId);
     void upisiHipotekuNaNepokretnost(Hipoteka hipoteka, String objekatId);
-    void obrisiHipoteku(Hipoteka hipoteka);
+    void obrisiHipoteku(String hipotekaId);
     void izmeniPravniStatus(String pravniStatus, String objekatId);
     void upisiNovoizgradjeniObjekat(Nepokretnost objekat, String parcelaId);
     void izmeniListuImalacaPrava(String parcelaid, List<Pravo> imaociPrava);
     List<Parcela> nadjiDostupneParcele(double latitude, double longitude, double radius, List<String> tipovi);
     List<Nepokretnost> pretragaNepokretnostiPoAdresi(String adresa);
     List<Parcela> pretragaParcelaPoPostanskomKodu(int postanskiKod);
+    List<Parcela> pretraziParcelePoBrojuParcele(String brojParcele);
+    void upisiNepokrenostNaParcelu(Nepokretnost nepokretnost, String parcelaId);
 }

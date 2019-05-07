@@ -42,6 +42,8 @@ public class Nepokretnost {
         this.hipoteke = hipoteke;
     }
 
+
+
     public Nepokretnost() {
     }
 
@@ -99,6 +101,10 @@ public class Nepokretnost {
 
     public String getPravniStatus() {
         return pravniStatus;
+    }
+
+    public void setParcela(Parcela parcela) {
+        this.parcela = parcela;
     }
 
     public void setPravniStatus(String pravniStatus) {
