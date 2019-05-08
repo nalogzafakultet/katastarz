@@ -38,7 +38,6 @@ public class SlaveBrokerService implements BrokerService {
             Stream<String> lines = Files.lines(path);
             String description = lines.collect(Collectors.joining("\n"));
             lines.close();
-            System.out.println("MEJK");
             makeRequest(HttpMethod.POST, "services", description);
         } catch (IOException|URISyntaxException e) {
             System.out.println("Failed to register the service.");

@@ -1,6 +1,6 @@
 {
   "name": "katastar",
-  "baseUrl": "http://localhost:5001",
+  "baseUrl": "http://localhost:5001/katastar",
   "endpoints": [{
     "path": "/test",
     "name": "Test",
@@ -15,37 +15,46 @@
     "path": "/prostornaPretraga",
     "name": "ProstornaPretraga",
     "method": "POST",
+    "responseSchema": "{\"$ref\":\"#/definitions/TODO\",\"$schema\":\"http://json-schema.org/draft-06/schema#\",\"definitions\":{\"Test\":{\"additionalProperties\":false,\"properties\":{\"pozdrav\":{\"type\":\"string\"}},\"required\":[\"pozdrav\"],\"type\":\"object\"}}}"
   }, {
     "path": "/pretragaAdresnogRegistra",
     "name": "pretragaAdresnogRegistra",
     "method": "GET",
+    "responseSchema": "{\"$ref\":\"#/definitions/TODO\",\"$schema\":\"http://json-schema.org/draft-06/schema#\",\"definitions\":{\"Test\":{\"additionalProperties\":false,\"properties\":{\"pozdrav\":{\"type\":\"string\"}},\"required\":[\"pozdrav\"],\"type\":\"object\"}}}"
   }, {
     "path": "/parcela/([a-zA-Z0-9]+)/objekti",
     "name": "UpisObjektaNaParcelu",
     "method": "POST",
+    "responseSchema": "{\"$ref\":\"#/definitions/TODO\",\"$schema\":\"http://json-schema.org/draft-06/schema#\",\"definitions\":{\"Test\":{\"additionalProperties\":false,\"properties\":{\"pozdrav\":{\"type\":\"string\"}},\"required\":[\"pozdrav\"],\"type\":\"object\"}}}"
   }, {
     "path": "/parcela/([a-zA-Z0-9]+)/imaociPrava",
     "name": "IzmenaListeImalacaPrava",
     "method": "PUT",
+    "responseSchema": "{\"$ref\":\"#/definitions/TODO\",\"$schema\":\"http://json-schema.org/draft-06/schema#\",\"definitions\":{\"Test\":{\"additionalProperties\":false,\"properties\":{\"pozdrav\":{\"type\":\"string\"}},\"required\":[\"pozdrav\"],\"type\":\"object\"}}}"
   }, {
     "path": "/parcela/([a-zA-Z0-9]+)/objekat/([a-zA-Z0-9]+)/pravniStatus",
     "name": "IzmenaPravnogStatusaObjekta",
     "method": "PUT",
+    "responseSchema": "{\"$ref\":\"#/definitions/TODO\",\"$schema\":\"http://json-schema.org/draft-06/schema#\",\"definitions\":{\"Test\":{\"additionalProperties\":false,\"properties\":{\"pozdrav\":{\"type\":\"string\"}},\"required\":[\"pozdrav\"],\"type\":\"object\"}}}"
   }, {
     "path": "/parcela/([a-zA-Z0-9]+)/hipoteke",
     "name": "DodavanjeHipotekeNaParcelu",
     "method": "POST",
+    "responseSchema": "{\"$ref\":\"#/definitions/TODO\",\"$schema\":\"http://json-schema.org/draft-06/schema#\",\"definitions\":{\"Test\":{\"additionalProperties\":false,\"properties\":{\"pozdrav\":{\"type\":\"string\"}},\"required\":[\"pozdrav\"],\"type\":\"object\"}}}"
   }, {
     "path": "/parcela/([a-zA-Z0-9]+)/hipoteke/([a-zA-Z0-9]+)",
     "name": "BrisanjeHipotekeSaParcele",
     "method": "DELETE",
+    "responseSchema": "{\"$ref\":\"#/definitions/TODO\",\"$schema\":\"http://json-schema.org/draft-06/schema#\",\"definitions\":{\"Test\":{\"additionalProperties\":false,\"properties\":{\"pozdrav\":{\"type\":\"string\"}},\"required\":[\"pozdrav\"],\"type\":\"object\"}}}"
   }, {
     "path": "/parcela/([a-zA-Z0-9]+)/objekat/([a-zA-Z0-9]+)/hipoteke",
     "name": "DodavanjeHipotekeNaNepokretnost",
     "method": "POST",
+    "responseSchema": "{\"$ref\":\"#/definitions/TODO\",\"$schema\":\"http://json-schema.org/draft-06/schema#\",\"definitions\":{\"Test\":{\"additionalProperties\":false,\"properties\":{\"pozdrav\":{\"type\":\"string\"}},\"required\":[\"pozdrav\"],\"type\":\"object\"}}}"
   }, {
     "path": "/parcela/([a-zA-Z0-9]+)/objekat/([a-zA-Z0-9]+)/hipoteke/([a-zA-Z0-9]+)",
     "name": "BrisanjeHipotekeSaNepokretnosti",
     "method": "DELETE",
+    "responseSchema": "{\"$ref\":\"#/definitions/TODO\",\"$schema\":\"http://json-schema.org/draft-06/schema#\",\"definitions\":{\"Test\":{\"additionalProperties\":false,\"properties\":{\"pozdrav\":{\"type\":\"string\"}},\"required\":[\"pozdrav\"],\"type\":\"object\"}}}"
   }]
 }
