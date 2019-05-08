@@ -46,7 +46,7 @@ public class KatastarController {
         return katastarService.pretragaNepokretnostiPoAdresi(adresa);
     }
 
-    @PostMapping("/katastar/parcela/{parcelaId}/objekti")
+    @PostMapping("/parcela/{parcelaId}/objekti")
     public void upisiObjekatNaParcelu(@PathVariable("parcelaId") String parcelaId,
                                       @RequestBody NepokretnostReqDTO nepokretnostDTO) {
         NepokretnostBuilder builder = new NepokretnostBuilder();
@@ -60,12 +60,12 @@ public class KatastarController {
         katastarService.upisiNepokrenostNaParcelu(nepokretnost, parcelaId);
     }
 
-    @PutMapping("/katastar/parcela/{parcelaId}/imaociPrava")
+    @PutMapping("/parcela/{parcelaId}/imaociPrava")
     public void izmeniImaocePrava(@PathVariable("parcelaId") String parcelaId, @RequestBody List<Pravo> prava) {
         katastarService.izmeniListuImalacaPrava(parcelaId, prava);
     }
 
-    @PutMapping("/katastar/parcela/{parcelaId}/objekat/{objekatId}/pravniStatus")
+    @PutMapping("/parcela/{parcelaId}/objekat/{objekatId}/pravniStatus")
     public void promeniPravniStatusObjekta(@PathVariable("parcelaId") String parcelaId,
                                            @PathVariable("objekatId") String objekatId,
                                            @RequestBody PravniStatusDTO pravniStatusDTO) {
